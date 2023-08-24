@@ -14,15 +14,19 @@ public class test01 {
     }
 
     public static void main(final String[] args) {
-        final Collection<Object> c = new TreeSet<>(
+        Collection<Object> c = new TreeSet<>(
         new Comparator<Object>() {
             @Override
             public int compare(Object arg0, Object arg1) {
-                return 0;
+                return 1;
             }
         });
         c.add("1");
+        c.add(2);
         c.add("args");
+        for (Object object : c) {
+            System.out.println(object);
+        }
 
     }
 
